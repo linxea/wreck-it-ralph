@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+		/>
+		<title></title>
+		<style>
+			body {
+				height: 100vh;
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				background: #000;
+				padding: 3em;
+				position: relative;
+			}
+
+			/* I stole Ralph from Jason Delia https://codepen.io/jasonadelia/pen/xpwmq */
+			#ralph {
+				position: fixed;
+				display: none;
+				font-size: 14px;
+				height: 1em;
+				width: 1em;
+				box-shadow: inset 0 0 0 1em #D82137, 1em 0 #D82137, 4em 0 #D82137, 5em 0 #D82137, 8em 0 #D82137, 9em 0 #D82137, 1em 1em #D82137, 2em 1em #D82137, 3em 1em #D82137, 4em 1em #D82137, 5em 1em #D82137, 7em 1em #D82137, 8em 1em #D82137, -2em 2em #D82137, -1em 2em #D82137, 0em 2em #D82137, 1em 2em #D82137, 2em 2em #D82137, 3em 2em #D82137, 4em 2em #D82137, 5em 2em #D82137, 6em 2em #D82137, 7em 2em #D82137, 8em 2em #D82137, 9em 2em #D82137, 10em 2em #D82137, -1em 3em #D82137, 0em 3em #D82137, 1em 3em #D82137, 2em 3em #D82137, 3em 3em #D82137, 4em 3em #D82137, 5em 3em #D82137, 6em 3em #D82137, 7em 3em #D82137, 8em 3em #D82137, 9em 3em #D82137, -3em 4em #D82137, -2em 4em #D82137, -1em 4em #D82137, 0em 4em #D82137, 1em 4em #D82137, 2em 4em #D82137, 3em 4em #D82137, 4em 4em #D82137, 5em 4em #D82137, 6em 4em #D82137, 7em 4em #D82137, 8em 4em #D82137, 9em 4em #D82137, 10em 4em #D82137, 11em 4em #D82137, -2em 5em #D82137, -1em 5em #D82137, 0em 5em #D82137, 1em 5em #D82137, 2em 5em #F8B2AA, 3em 5em #F8B2AA, 4em 5em #F8B2AA, 5em 5em #F8B2AA, 6em 5em #F8B2AA, 7em 5em #D82137, 8em 5em #D82137, 9em 5em #D82137, -1em 6em #D82137, 0em 6em #D82137, 1em 6em #C88074, 2em 6em #90191D, 3em 6em #F8B2AA, 4em 6em #F8B2AA, 5em 6em #F8B2AA, 6em 6em #90191D, 7em 6em #C88074, 8em 6em #D82137, 9em 6em #D82137, -2em 7em #D82137, -1em 7em #D82137, 0em 7em #D82137, 1em 7em #C88074, 2em 7em #C88074, 3em 7em #90191D, 4em 7em #C88074, 5em 7em #90191D, 6em 7em #C88074, 7em 7em #C88074, 8em 7em #D82137, 9em 7em #D82137, 10em 7em #D82137, -3em 8em #D82137, -2em 8em #C88074, -1em 8em #C88074, 0em 8em #D82137, 1em 8em #C88074, 2em 8em #FFFFFF, 3em 8em #FFFFFF, 4em 8em #C88074, 5em 8em #FFFFFF, 6em 8em #FFFFFF, 7em 8em #C88074, 8em 8em #D82137, 9em 8em #C88074, 10em 8em #C88074, 11em 8em #D82137, -2em 9em #F8B2AA, -1em 9em #C88074, 0em 9em #D82137, 1em 9em #F8B2AA, 2em 9em #FFFFFF, 3em 9em #000000, 4em 9em #F8B2AA, 5em 9em #000000, 6em 9em #FFFFFF, 7em 9em #F8B2AA, 8em 9em #D82137, 9em 9em #C88074, 10em 9em #F8B2AA, -2em 10em #F8B2AA, -1em 10em #F8B2AA, 0em 10em #D82137, 1em 10em #F8B2AA, 2em 10em #F8B2AA, 3em 10em #D74656, 4em 10em #D74656, 5em 10em #D74656, 6em 10em #F8B2AA, 7em 10em #F8B2AA, 8em 10em #D82137, 9em 10em #F8B2AA, 10em 10em #F8B2AA, -1em 11em #90191D, 0em 11em #F8B2AA, 1em 11em #F8B2AA, 2em 11em #F8B2AA, 3em 11em #D74656, 4em 11em #D74656, 5em 11em #D74656, 6em 11em #F8B2AA, 7em 11em #F8B2AA, 8em 11em #F8B2AA, 9em 11em #90191D, -1em 12em #C88074, 0em 12em #F8B2AA, 1em 12em #F8B2AA, 2em 12em #F8B2AA, 3em 12em #F8B2AA, 4em 12em #F8B2AA, 5em 12em #F8B2AA, 6em 12em #F8B2AA, 7em 12em #F8B2AA, 8em 12em #F8B2AA, 9em 12em #C88074, -1em 13em #F8B2AA, 0em 13em #F8B2AA, 1em 13em #000000, 2em 13em #FFFFFF, 3em 13em #FFFFFF, 4em 13em #FFFFFF, 5em 13em #FFFFFF, 6em 13em #FFFFFF, 7em 13em #000000, 8em 13em #F8B2AA, 9em 13em #F8B2AA, -1em 14em #F8B2AA, 0em 14em #000000, 1em 14em #000000, 2em 14em #000000, 3em 14em #000000, 4em 14em #000000, 5em 14em #000000, 6em 14em #000000, 7em 14em #000000, 8em 14em #000000, 9em 14em #F8B2AA, -1em 15em #F8B2AA, 0em 15em #000000, 1em 15em #C88074, 2em 15em #000000, 3em 15em #791714, 4em 15em #791714, 5em 15em #791714, 6em 15em #000000, 7em 15em #C88074, 8em 15em #000000, 9em 15em #F8B2AA, -1em 16em #F8B2AA, 0em 16em #000000, 1em 16em #791714, 2em 16em #FFFFFF, 3em 16em #FFFFFF, 4em 16em #FFFFFF, 5em 16em #FFFFFF, 6em 16em #FFFFFF, 7em 16em #791714, 8em 16em #000000, 9em 16em #F8B2AA, 0em 17em #F8B2AA, 1em 17em #F8B2AA, 2em 17em #F8B2AA, 3em 17em #F8B2AA, 4em 17em #F8B2AA, 5em 17em #F8B2AA, 6em 17em #F8B2AA, 7em 17em #F8B2AA, 8em 17em #F8B2AA, 1em 18em #C88074, 2em 18em #C88074, 3em 18em #C88074, 4em 18em #C88074, 5em 18em #C88074, 6em 18em #C88074, 7em 18em #C88074;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="ralph"></div>
+		<script>
+			const body = document.getElementsByTagName("body")[0];
+			const ralph = document.getElementById("ralph");
+
+			function duplicateRalphAtRandomPosition() {
+				const ralphClone = ralph.cloneNode(true);
+				ralphClone.style.display = "block";
+				ralphClone.style.top = getRandomPercentage();
+				ralphClone.style.left = getRandomPercentage();
+				ralphClone.style.transform = `scale(${getRandomSize()})`;
+				body.appendChild(ralphClone);
+			}
+
+			// Return 0% to 100%
+			function getRandomPercentage() {
+				return Math.random() * 101 + "%";
+			}
+
+			// Return 0.3 - 1
+			function getRandomSize() {
+				return Math.random() * 0.8 + 0.3;
+			}
+
+			// Duplicate Ralph every second yo
+			setInterval(function() {
+				duplicateRalphAtRandomPosition();
+			}, 1000);
+		</script>
+	</body>
+</html>
